@@ -8,7 +8,7 @@ from django.utils.encoding import python_2_unicode_compatible
 from django.utils.encoding import force_text
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-
+from timezone_field import TimeZoneField
 from unidecode import unidecode
 
 import autoslug
@@ -143,6 +143,8 @@ class AbstractCity(Base):
         null=True, blank=True)
     longitude = models.DecimalField(max_digits=8, decimal_places=5,
         null=True, blank=True)
+
+    timezone = TimeZoneField(null=True)
 
     region = models.ForeignKey(CITIES_LIGHT_APP_NAME + '.Region', blank=True,
                                null=True)

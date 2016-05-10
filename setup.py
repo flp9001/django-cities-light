@@ -15,7 +15,7 @@ def read(fname):
 
 setup(
     name='django-cities-light',
-    version='3.2.0',
+    version='3.2.1',
     description='Simple alternative to django-cities',
     author='James Pic,Dominick Rivard,Alexey Evseev',
     author_email='jamespic@gmail.com, dominick.rivard@gmail.com, myhappydo@gmail.com',
@@ -31,6 +31,7 @@ setup(
         'unidecode>=0.04.13',
         'django_autoslug',
         'progressbar2>=3.6.0'
+	'django-timezone-field>=1.3'
     ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',

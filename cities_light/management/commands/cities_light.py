@@ -8,6 +8,7 @@ import time
 import logging
 import optparse
 import sys
+import pytz
 if sys.platform != 'win32':
     import resource
 
@@ -385,6 +386,10 @@ It is possible to force the import of files which weren't downloaded using the
 
         if not city.feature_code:
             city.feature_code = items[ICity.featureCode]
+            save = True
+        
+        if not city.timezone:
+            city.timezone = pytz.timezone(items[ICity.timezone])
             save = True
 
         if not TRANSLATION_SOURCES and not city.alternate_names:
