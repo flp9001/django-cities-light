@@ -30,8 +30,8 @@ setup(
         'six',
         'unidecode>=0.04.13',
         'django_autoslug',
-        'progressbar2>=3.6.0'
-	'django-timezone-field>=1.3'
+        'progressbar2>=3.6.0',
+        'django-timezone-field>=1.3',
     ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
